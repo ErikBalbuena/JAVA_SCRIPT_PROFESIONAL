@@ -20,3 +20,35 @@ obj02.metodo01();//Esta es la ejecución del método, muestra el mensaje
 obj02.metodo02();//Esta es la ejecución del método, muestra el mensaje 
 obj02.metodo03();//Esta es la ejecución del método, muestra el mensaje 
 
+//ES POSIBLE DECLARAR UN OBJETO VACÍO E IR AGREGANDO PROPIEDADES
+
+const obj03 = {};
+
+obj03.prop01 = "propiedad 01";
+console.log(obj03);
+
+obj03.prop02 = "propiedad 02";
+console.log(obj03);
+
+//LOS VALORES DE LAS PROPIEDADES TAMBIÉN PUEDEN MODIFICARSE
+
+obj03.prop01 = "propiedad uno";
+console.log(obj03);
+
+//LOS OBJETOS SON MUTABLES
+//LOS OBJETOS SE ALMACENAN POR REFERENCIA NO POR VALOR
+
+//esta declaración NO CREA UNA COPIA del objeto
+//por lo que cambian ambos obj03 y obj04
+//ambos tienen la misma referencia
+const obj04 = obj03;
+
+obj04.prop02 = "propiedad dos";
+console.log("obj04",obj04);
+console.log("obj03",obj04);
+
+//ESTA DECLARACIÓN NO SE PUEDE:  const obj05 = new obj03();
+
+
+
+
